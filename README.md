@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+> This is a ruby on rails 5 application.
+
+### features 
+
+- real time chat engines
+- blog
+- portfolio
+- drag and drop
+
+```ruby
+def my_great_method
+puts "here it is"
+end
+```
