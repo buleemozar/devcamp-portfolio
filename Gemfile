@@ -56,3 +56,5 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.3'
 
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+gem "stone_view_tool", git: "https://github.com/buleemozar/stone_view_tool"
