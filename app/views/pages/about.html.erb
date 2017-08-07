@@ -1,26 +1,39 @@
 <div class="app-card-container">
   <div class="card">
-   <h1>About Me</h1>
-    <h4>"It's a good thing to be strange! Normalness leads to sadness." -Phil Lester</h4>
-    
-    <hr> 
-    
+    <h1>About Me</h1>
+
+    <hr>
+
     <div class="row">
-    <div class="col-md-4">
-      <%= image_tag "profile.jpg", width: 300, height: 400, alt: "profile image" %>
-    </div> 
-    
-    <div class="col-md-8">
-      <p>Social Media Addict | 
+      <div class="col-md-4">
+        <%= image_tag "profile.jpg", width: 300, height: 400, alt: "profile image" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+       <p>Social Media Addict | 
       Writer | 
       Certified Lead in School's Stagecraft | 
       Yearbook Staff | 
       Student in Code to Success | 
       Cross Country Runner | 
       Pretty Awesome Human</p>
-    </div>
-    </div>
-    
+
         <p>
           <button
             class="btn btn-primary"
